@@ -1,6 +1,0 @@
-development:
-  GMAIL_USERNAME: myemail@gmail.com
-  GMAIL_PASSWORD: monkey123
-production:
-  GMAIL_USERNAME: myemail@mydomain.com
-  GMAIL_PASSWORD: myproductionpassword123

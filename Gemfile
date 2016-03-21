@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# I need this to add env file to ruby on rails
+gem 'dotenv-rails', :groups => [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
