@@ -1,11 +1,3 @@
-<!-- <div id="search-form">
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:term, "Search for:") %>
-  <%= text_field_tag(:term) %>
-  <%= submit_tag("Search") %>
-<% end %>
-</div> --> 
-
 <h1> Random Restaurant picker: </h1>
 <h3> Enter your preferences and we'll randomly find a 4+ star rated restaurant for you nearby</h3>
 
@@ -13,6 +5,18 @@
   	<%= form_tag("/biz", method: "get") do %>
 	    <%= label_tag(:address, "Search for:") %>
 	    <%= text_field_tag(:address, params[:address], id: "address") %>
+	    <br>
+	    <p> Distance:</p>
+	    <%= label_tag(:radius_filter, "3000m") %>
+	    <%= radio_button_tag(:radius_filter, value = 30000) %><br>
+	    <%= label_tag(:radius_filter, "2000m") %>
+	    <%= radio_button_tag(:radius_filter, value = 2000) %><br>
+	    <%= label_tag(:radius_filter, "1000m") %>
+	    <%= radio_button_tag(:radius_filter, value = 1000) %><br>
 	  	<%= submit_tag("Search") %>
  	<% end %>	
  </div>
+
+<br>
+
+<%= image_tag("yelp.png") %>
