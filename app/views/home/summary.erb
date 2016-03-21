@@ -1,0 +1,11 @@
+<h1> Result </h1>
+
+<% number_of_businesses = @businesses.length %>
+<% random_number = rand(number_of_businesses) %>
+
+<p> <%= @businesses[random_number].name %> </p>
+<p> Cross-Streets: <%= @businesses[random_number].location.cross_streets %> </p>
+<p> Rating:  <%= @businesses[random_number].rating %> </p>
+
+<%= link_to "Pick Another Restaurant", url_for(params) %>
+<%= link_to "Back", root_path %> 

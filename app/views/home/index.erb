@@ -1,11 +1,18 @@
-<div id="search-form">
+<!-- <div id="search-form">
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:term, "Search for:") %>
   <%= text_field_tag(:term) %>
   <%= submit_tag("Search") %>
 <% end %>
-</div>
+</div> --> 
 
-<h1> Your matches </h1>
-<div id="results">
-</div>
+<h1> Random Restaurant picker: </h1>
+<h3> Enter your preferences and we'll randomly find a 4+ star rated restaurant for you nearby</h3>
+
+ <div class='input'>
+  	<%= form_tag("/biz", method: "get") do %>
+	    <%= label_tag(:address, "Search for:") %>
+	    <%= text_field_tag(:address, params[:address], id: "address") %>
+	  	<%= submit_tag("Search") %>
+ 	<% end %>	
+ </div>
