@@ -18,14 +18,24 @@ class HomeController < ApplicationController
 
   def biz
   	address = params[:address]
-    parameters = {category_filter: 'restaurants', radius_filter: params[:radius_filter]}
+    parameters = {category_filter: 'restaurants', radius_filter: params[:radius_filter], actionlinks: true}
 
-    @businesses = $client.search(address, parameters).businesses.select { |business| business.rating > 4 }
+    @businesses = $client.search(address, parameters).businesses.select { |business|  business.rating > 3.5}
     @business = pick_random_business(@businesses) 
    	render :summary
   end
 
   def summary
+  end
+
+   def order
+  	address = params[:address]
+    parameters = {category_filter: 'restaurants', radius_filter: params[:radius_filter], actionlinks: true}
+
+    @businesses = $client.search(address, parameters).businesses.select { |business|  business.rating > 3.5 && business.eat24_url }
+    @business = pick_random_business(@businesses) 
+    render json: @businesses
+   	# render :summary
   end
 
   private

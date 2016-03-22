@@ -1,12 +1,19 @@
 
-<h1> Result </h1>
+<h3> Result: </h3>
 
-<p> <%= @business.name %> </p>
-<p> Cross-Streets: <%= @business.location.cross_streets %> </p>
+<h2> <%= @business.name %> </h2>
+<p> Address: 
+	<% if @business.location.address.length > 1 %>
+		<%= @business.location.address.join(', ') + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code %>
+	<% else %>
+		<%= @business.location.address[0] + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code %> 
+	<% end %>
+</p>
 <p> Rating:  <%= @business.rating %> </p>
-<p> Link:  <%= @business.url %> </p> 
-
-
+<p> See Reviews:  <%= @business.url %> </p> 
+<% if @business.eat24_url %>
+<p> Order online: <%=@business.eat24_url %></p>
+<% end %>
 
 
 <%= link_to "Pick Another Restaurant", url_for(params) %>
