@@ -1,4 +1,7 @@
 // logo and potential navbar
+body {
+	background-color: #F9F9F9;
+}
 .header {
 	padding-top: 25px;
 	padding-left: 8%;
@@ -7,6 +10,7 @@
 .header h3 {
 	letter-spacing: 3px;
 	font-size: 18px;
+	color: #6CC5B3;
 }
 
 // splash title
@@ -20,6 +24,12 @@
 
 .banner h1 {
 	font-size: 64px;
+	color: #696969;
+}
+
+.banner h3 {
+	color: #A9A9A9;
+	font-weight: 300;
 }
 
 .input {
@@ -36,6 +46,7 @@
 
 #pac-input[type="text"]{
 	font-size: 20px;
+	font-weight: 300;
 }
 
 select {
@@ -49,6 +60,7 @@ select {
   display: inline-block;
   margin-right: 7px;
   margin-top: 15px;
+  font-weight: 300;
 }
 
 
@@ -59,4 +71,21 @@ input[type=submit] {
 	border: none;
 	display: inline-block;
 	margin-top: 15px;
+	background-color: #6CC5B3;
+	color: white;
+	font-weight: 300;
+}
+
+.footer {
+	position: fixed;
+	background-color: white;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #D3D3D3;
+}
+
+.footer p {
+	text-align: center;
+	padding: 15px;
+	color: #D3D3D3;
 }
