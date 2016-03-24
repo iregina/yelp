@@ -4,9 +4,14 @@
 	padding-left: 8%;
 }
 
+.header h3 {
+	letter-spacing: 3px;
+	font-size: 18px;
+}
+
 // splash title
 .banner {
-	background-color: red;
+	background-color: none;
 	text-align: center;
 	padding: 50px 0px 50px 0px;
 	padding-left: 10%;
@@ -19,6 +24,7 @@
 
 .input {
 	padding: 25px;
+	text-align: center;
 }
 
 #pac-input {
@@ -36,12 +42,21 @@ select {
   background: none;
   font-size: 20px;
   height: 39px;
+  width: 160px;
   border: 0;
   outline: 1px solid #CCC;
   background-color: white;
   display: inline-block;
+  margin-right: 7px;
+  margin-top: 15px;
 }
 
+
 input[type=submit] {
+	height: 40px;
+	width: 110px;
+	font-size: 20px;
 	border: none;
+	display: inline-block;
+	margin-top: 15px;
 }
