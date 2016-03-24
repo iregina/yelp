@@ -19,14 +19,7 @@
  <div class='input'>
   	<%= form_tag("/biz", method: "get") do %>
 	    <%= text_field_tag(:address, params[:address], id: "pac-input") %>
-	    <br>
-	    <p> Distance:</p>
-	    <%= label_tag(:radius_filter, "3000m") %>
-	    <%= radio_button_tag(:radius_filter, value = 30000) %><br>
-	    <%= label_tag(:radius_filter, "2000m") %>
-	    <%= radio_button_tag(:radius_filter, value = 2000) %><br>
-	    <%= label_tag(:radius_filter, "1000m") %>
-	    <%= radio_button_tag(:radius_filter, value = 1000) %><br>
+	    <%= select_tag :radius_filter, options_for_select([['1 mile', 1000], ['2 miles', 2000], ['3 miles', 3000]], 1) %>
 	  	<%= submit_tag("Search") %>
  	<% end %>	
  </div>
@@ -34,5 +27,4 @@
 <br>
 <!-- <p> <%= 'active_record'.camelize  %></p> -->
 
-<a href="http://www.yelp.com"><%= image_tag("yelp.png") %></a>
 
