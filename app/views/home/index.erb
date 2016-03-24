@@ -9,7 +9,7 @@
 
 
 <div class="header">
-	<h3> FOURSTARS </h3>
+	<h3><%= link_to "FOURSTARS", root_path %></h3>
 </div>
 
 <div class="banner">
@@ -19,7 +19,7 @@
 
  <div class='input'>
   	<%= form_tag("/biz", method: "get") do %>
-	    <%= text_field_tag(:address, params[:address], id: "pac-input") %>
+	    <%= text_field_tag(:address, params[:address], id: "pac-input", required: true) %>
 	    <%= select_tag :radius_filter, options_for_select([['1 mile away', 1000], ['2 miles away', 2000], ['3 miles away', 3000]], 1) %>
 	  	<%= submit_tag("Search") %>
  	<% end %>	
@@ -27,7 +27,7 @@
 
 
 <div class="footer">
-	<p> Brought to you by Yelp </p>
+	<p> Created by Regina Wong | Brought to you by Yelp </p>
 </div>
 <!-- <p> <%= 'active_record'.camelize  %></p> -->
 
