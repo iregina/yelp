@@ -1,19 +1,23 @@
-<h3> Result: </h3>
-
-<h2> <%= @business.name %> </h2>
-<p> Address: 
-	<% if @business.location.address.length > 1 %>
-		<%= @business.location.address.join(', ') + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code %>
-	<% else %>
-		<%= @business.location.address[0] + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code %> 
+<div class="summary">
+	<h1> <%= @business.name %> </h1>
+	<p>
+		<% if @business.location.address.length > 1 %>
+			<%= @business.location.address.join(', ') + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code %>
+		<% else %>
+			<%= @business.location.address[0] + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code %> 
+		<% end %>
+	</p>
+<!-- 	<p> Rating:  <%= @business.rating %> </p> -->
+	<p> See Reviews:  <%= @business.url %> </p> 
+	<% if @business.eat24_url %>
+	<p> Order online: <%=@business.eat24_url %></p>
 	<% end %>
-</p>
-<p> Rating:  <%= @business.rating %> </p>
-<p> See Reviews:  <%= @business.url %> </p> 
-<% if @business.eat24_url %>
-<p> Order online: <%=@business.eat24_url %></p>
-<% end %>
+</div>
 
 
 <%= link_to "Pick Another Restaurant", url_for(params) %>
 <%= link_to "Back", root_path %> 
+
+<div class="footer">
+	<p> Brought to you by Yelp </p>
+</div>
