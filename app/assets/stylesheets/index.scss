@@ -86,10 +86,17 @@ input[type=submit] {
 	bottom: 0;
 	width: 100%;
 	border-top: 1px solid #D3D3D3;
-}
-
-.footer p {
 	text-align: center;
 	padding: 15px;
 	color: #D3D3D3;
+}
+
+.footer a {
+	color: #D3D3D3;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+.footer a:hover {
+	color: #A9A9A9;
 }
