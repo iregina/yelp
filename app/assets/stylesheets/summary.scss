@@ -2,15 +2,23 @@
 	padding-top: 50px;
 	padding-left: 15%;
 	padding-right: 15%;
+	text-align: center;
 }
 
 .summary h1 {
 	font-weight: 600;
 	color: #6CC5B3;
-	font-size: 45px;
+	font-size: 55px;
+	padding-bottom: 5px;
 }
 
 .summary p {
 	color: #696969;
-	font-size: 16px;
+	font-size: 18px;
+}
+
+.summary h4 {
+	color: #808080;
+	font-weight: 300;
+
 }

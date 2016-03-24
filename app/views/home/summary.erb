@@ -1,4 +1,9 @@
+<div class="header">
+	<a href="<% link_to root_path %>"><h3> FOURSTARS </h3></a>
+</div>
+
 <div class="summary">
+	<h4> Congratulations! You're eating at: </h4>
 	<h1> <%= @business.name %> </h1>
 	<p>
 		<% if @business.location.address.length > 1 %>
@@ -8,15 +13,13 @@
 		<% end %>
 	</p>
 <!-- 	<p> Rating:  <%= @business.rating %> </p> -->
-	<p> See Reviews:  <%= @business.url %> </p> 
+	<br>
+	<p> <a href="<%= @business.url %>"> See Reviews </a>  |  <%= link_to "Pick Another Restaurant", url_for(params) %></p> 
 	<% if @business.eat24_url %>
-	<p> Order online: <%=@business.eat24_url %></p>
+	<p> <a href="<%=@business.eat24_url %>"> Order Online </a> </p>
 	<% end %>
 </div>
 
-
-<%= link_to "Pick Another Restaurant", url_for(params) %>
-<%= link_to "Back", root_path %> 
 
 <div class="footer">
 	<p> Brought to you by Yelp </p>
