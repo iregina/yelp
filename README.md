@@ -7,8 +7,7 @@ Whenever I or my friends make plans to go out for dinner, we have a hard time de
 
 I created a web app that takes away the responsiblity of decision making by generating a highly-rated restaurant choice (4 stars or above) for indecisive people.
   
-Live Link:  
-####[heroku](https://quiet-depths-30248.herokuapp.com/)
+####[Link to Web App](https://quiet-depths-30248.herokuapp.com/)
   
 ####[My Blog Post](https://http://iregina.github.io/portfolio/yelp.html)
 
