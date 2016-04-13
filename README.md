@@ -1,15 +1,15 @@
-Yelp App
-
-Heroku: https://quiet-depths-30248.herokuapp.com/
-
 # ![Yelp](logo.png)
+
 # Yelp App
 > Solution for all indecisive foodies
 
 Whenever I or my friends make plans to go out for dinner, we have a hard time deciding where to go.
 
 I created a web app that takes away the responsiblity of decision making by generating a highly-rated restaurant choice (4 stars or above) for indecisive people.
-
+  
+Live Link:  
+####[heroku](https://quiet-depths-30248.herokuapp.com/)
+  
 ####[My Blog Post](https://http://iregina.github.io/portfolio/yelp.html)
 
 
