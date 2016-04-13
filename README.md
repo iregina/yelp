@@ -29,9 +29,12 @@ Yelp API, Google Maps Geocoding, HTML5/CSS, Bootstrap
 ![Yelp1](yelp1.png)
 ![Yelp2](yelp2.png)
 
+## Wireframe  
+
+![Yelp1](Yelpie-Wireframe.png)
 
 ## License
 
 Everything in this repo is MIT License unless otherwise specified.
 
-MIT © Regina Wong, Sean Yang.
+MIT © Regina Wong.
