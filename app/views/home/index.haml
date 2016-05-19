@@ -1,0 +1,27 @@
+:javascript
+	console.log("Google API ran")
+	function initialize() {
+	var input = document.getElementById('pac-input');
+	var autocomplete = new google.maps.places.Autocomplete(input);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+.header
+	%h3= link_to "FOURSTARS", root_path
+
+
+.banner
+	%h1 Where do you want to eat?
+	%h3 Enter your preferences to find a 4+ star restaurant nearby.
+
+.input
+	=form_tag("/biz", method: :get) do
+		= text_field_tag(:address, params[:address], id: "pac-input", required: true)
+		= select_tag :radius_filter, options_for_select([['1 mile away', 1000], ['2 miles away', 2000], ['3 miles away', 3000]], 1)
+		= submit_tag("Search")
+
+.footer
+	%a{ href: "http://www.github.com/iregina"} Created by Regina Wong | 
+	%a{ href: "http://www.yelp.com"} Brought to you by Yelp
+
+

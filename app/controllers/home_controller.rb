@@ -35,6 +35,7 @@ class HomeController < ApplicationController
     max_number = businesses.length
     random_number = rand(max_number)
     return random_number
+    
   end
 
   # returns a random business 

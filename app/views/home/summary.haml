@@ -1,0 +1,24 @@
+.header
+	%h3
+		= link_to "FOURSTARS", root_path
+
+.summary
+	%h4 Congratulations! You're eating at:
+	%h1= @business.name
+	%p
+		- if @business.location.address.length > 1
+			= @business.location.address.join(', ') + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code
+		- else
+			= @business.location.address[0] + ", " + @business.location.city + " " + @business.location.state_code + ", " + @business.location.postal_code
+	%br
+	%p 
+		= link_to 'See Reviews |', @business.url
+		= link_to "Pick Another Restaurant", url_for(params)
+	- if @business.eat24_url
+		%p
+			%a { href: @business.eat24_url } Order Online
+
+
+.footer
+	%a { href: http://www.github.com/iregina} Created by Regina Wong| 
+	%a { href: http://www.yelp.com} Brought to you by Yelp
